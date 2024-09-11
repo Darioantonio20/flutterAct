@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/screens/reto1.dart';
 import 'package:flutter_application/screens/reto2.dart';
-import 'package:flutter_application/screens/reto3.dart';
 import 'screens/home.dart';
 import 'screens/contact.dart';
 import 'screens/splash.dart';
@@ -27,7 +26,6 @@ class MyApp extends StatelessWidget {
         '/contact': (context) => const ContactScreen(),
         '/reto1': (context) => const Reto1Screen(),
         '/reto2': (context) => const Reto2Screen(),
-        '/reto3': (context) => const Reto3Screen(),
       },
       debugShowCheckedModeBanner: false,
     );
