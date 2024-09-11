@@ -32,12 +32,6 @@ class HomeScreen extends StatelessWidget {
               Navigator.pushNamed(context, '/reto2');
             },
           ),
-          IconButton(
-            icon: const Icon(Icons.assignment, color: Colors.black),
-            onPressed: () {
-              Navigator.pushNamed(context, '/reto3');
-            },
-          ),
         ],
       ),
       extendBodyBehindAppBar: true,
@@ -49,14 +43,14 @@ class HomeScreen extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                colors: [Color(0xFFFDE5E7), Color(0xFFFFC1A8)],
+                colors: [Color.fromARGB(255, 217, 248, 236), Color.fromARGB(255, 93, 241, 162)],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 80.0), // Dejar espacio para el AppBar
+            padding: const EdgeInsets.only(top: 120.0), // Dejar espacio para el AppBar
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -84,30 +78,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 20),
-                // Sección de retos
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(
-                        'Retos disponibles',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          'Ver todos',
-                          style: TextStyle(color: Colors.orange),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                const SizedBox(height: 20),               
                 const SizedBox(height: 10),
                 // Filas de categorías con iconos (Retos)
                 Padding(
@@ -120,7 +91,6 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         _buildCategoryItem(Icons.assignment, 'Reto 1', context, '/reto1'),
                         _buildCategoryItem(Icons.assignment, 'Reto 2', context, '/reto2'),
-                        _buildCategoryItem(Icons.assignment, 'Reto 3', context, '/reto3'),
                       ],
                     ),
                   ),
@@ -128,14 +98,14 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 // Bienvenida
                 const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20.0),
+                  padding: EdgeInsets.symmetric(horizontal: 45.0),
                   child: Center(
                     child: Text(
-                      'Bienvenido a UP Chiapas',
+                      'Bienvenido a los retos de programación móvil',
                       style: TextStyle(
                         fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                        fontWeight: FontWeight.w900,
+                        color: Color.fromARGB(255, 215, 151, 23),
                       ),
                     ),
                   ),
@@ -147,7 +117,7 @@ class HomeScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: const Color(0xFFFFC1A8),
+        backgroundColor: Color.fromARGB(255, 215, 151, 23),
         child: const Icon(Icons.add, color: Colors.white),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
